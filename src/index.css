@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&family=Epilogue:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.875rem;
+
+    /* Cloud White palette */
+    --cloud: 210 20% 98%;
+    --mist: 214 25% 94%;
+    --slate-soft: 220 12% 55%;
+    --ink: 222 40% 16%;
+    --blue: 217 90% 50%;
+
+    --background: var(--cloud);
+    --foreground: var(--ink);
+    --card: 0 0% 100%;
+    --card-foreground: var(--ink);
+    --popover: 0 0% 100%;
+    --popover-foreground: var(--ink);
+    --primary: var(--blue);
+    --primary-foreground: 0 0% 100%;
+    --secondary: var(--mist);
+    --secondary-foreground: var(--ink);
+    --muted: var(--mist);
+    --muted-foreground: 220 10% 40%;
+    --accent: var(--blue);
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 20% 90%;
+    --input: 214 20% 90%;
+    --ring: var(--blue);
+
+    --font-display: 'Urbanist', sans-serif;
+    --font-sans: 'Epilogue', sans-serif;
+
+    --shadow-soft: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px -8px rgba(15, 23, 42, 0.08);
+    --shadow-lift: 0 1px 2px rgba(15, 23, 42, 0.06), 0 20px 50px -20px rgba(59, 130, 246, 0.25);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "ss01";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .glass {
+    background: hsla(210, 20%, 98%, 0.7);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  .gradient-mesh {
+    background:
+      radial-gradient(60% 50% at 80% 0%, hsla(217, 90%, 50%, 0.12), transparent 70%),
+      radial-gradient(50% 60% at 0% 100%, hsla(217, 90%, 50%, 0.07), transparent 70%),
+      hsl(210, 20%, 98%);
+  }
+
+  .ring-soft {
+    box-shadow: 0 0 0 1px hsla(222, 40%, 16%, 0.06), var(--shadow-soft);
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
