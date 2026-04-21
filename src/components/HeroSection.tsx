@@ -78,7 +78,7 @@ function PortraitCard() {
         <div className="aspect-[4/5] overflow-hidden bg-mist">
           {/* Portrait image — add your photo at src/assets/sashank.jpg */}
           <img
-            src="/sashank.jpg"
+            src={`${import.meta.env.BASE_URL}sashank.jpg`}
             alt="Portrait of Sashank Paka"
             className="w-full h-full object-cover"
             onError={(e) => {
