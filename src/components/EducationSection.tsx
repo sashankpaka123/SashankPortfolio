@@ -3,7 +3,7 @@ const schools = [
     school: 'George Mason University',
     degree: 'M.S. Computer Science',
     date: 'Jan 2026 — Dec 2027',
-    note: 'GPA 4.0 / 4.0',
+    note: 'In Progress',
     place: 'Fairfax, VA',
   },
   {

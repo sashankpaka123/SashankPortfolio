@@ -3,39 +3,40 @@ import { motion } from 'framer-motion';
 const projects = [
   {
     title: 'NBA Season Simulator',
+    subtitle: 'Python, React, Scikit-Learn, LangChain, FastAPI',
     tag: 'Predictive Analytics · RAG',
-    date: '2026 — Present',
-    body: 'A probabilistic forecasting engine that simulates the full 82-game NBA season — predicting standings, playoff seeding, and championship odds. A LangChain + vector-DB layer pulls live news, injuries, and trades to contextualize every prediction inside a React dashboard.',
+    date: 'Jan 2026 — Present',
+    highlights: [
+      'Engineered a full-stack forecasting dashboard utilizing FastAPI to serve real-time Monte Carlo season predictions to an interactive React client, orchestrating on-demand recalculations when users dynamically toggle player injuries or roster configurations.',
+      'Developed a scikit-learn predictive pipeline evaluated on 13K+ historical games using chronological splits to eliminate look-ahead bias; engineered dynamic features including rolling pace-adjusted Net Ratings, schedule fatigue indexes, and a daily grid ranking team efficiencies.',
+      'Optimized a stateful Monte Carlo simulation engine to execute 1,000+ full-season iterations (~1.3M game states) in under a second by extracting model coefficients to bypass scikit-learn\'s inference overhead via vectorized mathematical formulas.',
+      'Built an interactive React frontend featuring client-side state synchronizations with backend ML parameters, integrating interactive roster-health controls and a custom 5-on-5 game simulator with live commentary generation.',
+      'Integrated a LangChain LLM analyst utilizing context-injected prompt engineering to bridge quantitative model features (SRS, Net Rating, Spacing) and current roster contexts into automated, narrative forecast explanations.',
+    ],
     stack: ['Python', 'Scikit-Learn', 'LangChain', 'FastAPI', 'React'],
     accent: 'from-primary/15 to-primary/5',
   },
   {
     title: 'Trekly',
+    subtitle: 'React, Vite, Node.js, MongoDB Atlas, Google Maps',
     tag: 'Mapping · Real-time Safety',
     date: 'Aug — Dec 2025',
-    body: 'A high-performance mapping interface integrating the Google Maps Platform with a modular pipeline that normalizes disparate hazard feeds. Synchronized drawers and discussion threads keep hikers informed of safety alerts in real time.',
+    highlights: [
+      'A high-performance mapping interface integrating the Google Maps Platform with a modular pipeline that normalizes disparate hazard feeds. Synchronized drawers and discussion threads keep hikers informed of safety alerts in real time.',
+    ],
     stack: ['React', 'Vite', 'Node.js', 'MongoDB Atlas', 'Google Maps'],
     accent: 'from-emerald-400/20 to-primary/5',
-  },
-  {
-    title: 'A-eye',
-    tag: 'Full-Stack · Computer Vision',
-    date: 'Jun — Aug 2025',
-    body: 'Architected 5+ RESTful APIs connecting facial-recognition services (+30% accuracy & speed). Built React/Node modules that drove a 20% lift in active users and a 20% rise in platform engagement through optimized analytics dashboards.',
-    stack: ['React', 'Node.js', 'REST APIs'],
-    accent: 'from-orange-300/20 to-primary/5',
   },
 ];
 
 const ProjectsSection = () => {
   return (
-    <section id="work" className="py-28 bg-mist/60 border-y border-border">
+    <section id="projects" className="py-28 bg-mist/60 border-y border-border">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="flex items-end justify-between mb-14 flex-wrap gap-4">
           <div>
-
             <h2 className="font-display font-bold text-4xl md:text-5xl tracking-tight">
-              Selected Work
+              Projects
             </h2>
           </div>
           <a
@@ -75,9 +76,15 @@ const ProjectsSection = () => {
                   <h3 className="font-display font-bold text-3xl md:text-4xl tracking-tight">
                     {p.title}
                   </h3>
-                  <p className="mt-4 text-muted-foreground leading-relaxed">
-                    {p.body}
-                  </p>
+                  <div className="mt-1 text-sm text-primary font-medium">{p.subtitle}</div>
+                  <ul className="mt-4 space-y-3">
+                    {p.highlights.map((h, idx) => (
+                      <li key={idx} className="flex gap-3 text-muted-foreground leading-relaxed text-[0.925rem]">
+                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary/60 shrink-0" />
+                        <span>{h}</span>
+                      </li>
+                    ))}
+                  </ul>
                   <div className="mt-6 flex flex-wrap gap-2">
                     {p.stack.map((s) => (
                       <span

@@ -10,7 +10,7 @@ const AboutSection = () => {
         </div>
         <div className="lg:col-span-7 space-y-5 text-lg leading-relaxed text-muted-foreground">
           <p>
-            CS graduate from <span className="text-foreground font-medium">Virginia Tech</span>. Pursuing a Master’s degree in CS from <span className="text-foreground font-medium">GMU (GPA 4.0)</span>. Designer and implementer of artificial intelligence applications and full stack applications.
+            CS graduate from <span className="text-foreground font-medium">Virginia Tech</span>. Pursuing a Master’s degree in CS from <span className="text-foreground font-medium">GMU</span>. Designer and implementer of artificial intelligence applications and full stack applications.
           </p>
           <p>
             I enjoy designing applications that analyze data in an interesting way. Presently, I am working on creating an artificial intelligence-driven NBA Season Simulator that uses probabilistic forecasting and RAG to predict league standings. I had previously created an application called Trekly, which is a real-time hazard tracking system for hikers designed in React, Node.js, and Google maps technology.

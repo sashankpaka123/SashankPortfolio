@@ -2,9 +2,10 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
+import EducationSection from '@/components/EducationSection';
+import ExperienceSection from '@/components/ExperienceSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import ToolkitSection from '@/components/ToolkitSection';
-import EducationSection from '@/components/EducationSection';
 import ContactSection from '@/components/ContactSection';
 
 const Index = () => {
@@ -14,7 +15,7 @@ const Index = () => {
         <title>Sashank Paka | Full-Stack &amp; AI Engineer</title>
         <meta
           name="description"
-          content="Sashank Paka — Full-Stack & AI Engineer. CS @ Virginia Tech (B.S.) and George Mason (M.S., 4.0 GPA). Building full-stack systems and AI products with React, Python, and RAG."
+          content="Sashank Paka — Full-Stack & AI Engineer. CS @ Virginia Tech (B.S.) and George Mason (M.S.). Building full-stack systems and AI products with React, Python, and RAG."
         />
         <meta name="keywords" content="Sashank Paka, Full-Stack Developer, AI Engineer, React, Python, LangChain, Virginia Tech, George Mason" />
         <meta property="og:title" content="Sashank Paka | Full-Stack & AI Engineer" />
@@ -30,9 +31,10 @@ const Index = () => {
         <Navigation />
         <HeroSection />
         <AboutSection />
+        <EducationSection />
+        <ExperienceSection />
         <ProjectsSection />
         <ToolkitSection />
-        <EducationSection />
         <ContactSection />
       </main>
     </>
@@ -40,3 +42,4 @@ const Index = () => {
 };
 
 export default Index;
+

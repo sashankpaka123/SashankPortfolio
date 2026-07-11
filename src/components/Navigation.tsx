@@ -25,9 +25,10 @@ const Navigation = () => {
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
           <a href="#about" className="hover:text-foreground transition-colors">About</a>
-          <a href="#work" className="hover:text-foreground transition-colors">Work</a>
-          <a href="#stack" className="hover:text-foreground transition-colors">Stack</a>
           <a href="#education" className="hover:text-foreground transition-colors">Education</a>
+          <a href="#experience" className="hover:text-foreground transition-colors">Experience</a>
+          <a href="#projects" className="hover:text-foreground transition-colors">Projects</a>
+          <a href="#stack" className="hover:text-foreground transition-colors">Stack</a>
         </div>
 
         {/* CTA button */}
@@ -53,9 +54,10 @@ const Navigation = () => {
         <div className="md:hidden glass border-b border-border px-6 pb-4 animate-fade-in">
           <div className="flex flex-col gap-3">
             <a href="#about" onClick={() => setIsOpen(false)} className="text-muted-foreground hover:text-foreground transition-colors text-sm py-2">About</a>
-            <a href="#work" onClick={() => setIsOpen(false)} className="text-muted-foreground hover:text-foreground transition-colors text-sm py-2">Work</a>
-            <a href="#stack" onClick={() => setIsOpen(false)} className="text-muted-foreground hover:text-foreground transition-colors text-sm py-2">Stack</a>
             <a href="#education" onClick={() => setIsOpen(false)} className="text-muted-foreground hover:text-foreground transition-colors text-sm py-2">Education</a>
+            <a href="#experience" onClick={() => setIsOpen(false)} className="text-muted-foreground hover:text-foreground transition-colors text-sm py-2">Experience</a>
+            <a href="#projects" onClick={() => setIsOpen(false)} className="text-muted-foreground hover:text-foreground transition-colors text-sm py-2">Projects</a>
+            <a href="#stack" onClick={() => setIsOpen(false)} className="text-muted-foreground hover:text-foreground transition-colors text-sm py-2">Stack</a>
             <a
               href="#contact"
               onClick={() => setIsOpen(false)}

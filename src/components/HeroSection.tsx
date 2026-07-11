@@ -20,13 +20,13 @@ const HeroSection = () => {
           </p>
 
           <p className="mt-8 max-w-xl text-lg text-muted-foreground leading-relaxed">
-            Computer Science student at Virginia Tech (B.S.) and George Mason (M.S., 4.0 GPA) building full-stack systems and AI products with React, Python, and RAG.
+            Computer Science student at Virginia Tech (B.S.) and George Mason (M.S.) building full-stack systems and AI products with React, Python, and RAG.
           </p>
 
           {/* CTA buttons */}
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
-              href="#work"
+              href="#projects"
               className="inline-flex items-center gap-2 rounded-full bg-foreground text-background px-6 py-3 text-sm font-medium hover:bg-primary transition-colors"
             >
               View my work <span aria-hidden>→</span>
@@ -41,7 +41,7 @@ const HeroSection = () => {
 
           {/* Stats */}
           <div className="mt-12 grid grid-cols-3 gap-6 max-w-md">
-            <Stat value="4.0" label="Master's GPA" />
+            <Stat value="13K+" label="Games analyzed" />
             <Stat value="3+" label="Shipped projects" />
             <Stat value="30%" label="API perf. gains" />
           </div>
