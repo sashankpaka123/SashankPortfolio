@@ -2,13 +2,19 @@ import { motion } from 'framer-motion';
 
 const experiences = [
   {
-    title: 'A-eye',
-    role: 'Full-Stack & Computer Vision Engineer',
-    tag: 'Full-Stack · Computer Vision',
-    date: 'Jun — Aug 2025',
-    body: 'Architected 5+ RESTful APIs connecting facial-recognition services (+30% accuracy & speed). Built React/Node modules that drove a 20% lift in active users and a 20% rise in platform engagement through optimized analytics dashboards.',
-    stack: ['React', 'Node.js', 'REST APIs'],
-    accent: 'from-orange-300/20 to-primary/5',
+    title: 'Soontra',
+    role: 'AI/ML & Full-Stack Engineer',
+    tag: 'AI/ML · Full-Stack',
+    date: 'Jun — Sep 2026',
+    highlights: [
+      'Contributed to an AI-powered content platform using Python, LLMs, and AI agents to support automated content creation, media management, and workflow optimization.',
+      'Assisted in developing multimodal data pipelines using Python, FFmpeg, and transcription models for a platform indexing 3,500+ video and audio files.',
+      'Supported semantic search development using vector embeddings and pgvector within a system containing 91K+ indexed content items.',
+      'Helped build and test AI agent workflows for content generation, intelligent search, and task automation on a platform with 950+ agent executions.',
+      'Assisted with backend development and cloud infrastructure using AWS and APIs for a distributed media processing system handling 36K+ jobs.',
+    ],
+    stack: ['Python', 'LLMs', 'AI Agents', 'pgvector', 'FFmpeg', 'AWS', 'REST APIs'],
+    accent: 'from-sky-500/20 to-primary/5',
   },
 ];
 
@@ -52,9 +58,14 @@ const ExperienceSection = () => {
                     {p.title}
                   </h3>
                   <div className="mt-1 text-sm text-primary font-medium">{p.role}</div>
-                  <p className="mt-4 text-muted-foreground leading-relaxed">
-                    {p.body}
-                  </p>
+                  <ul className="mt-4 space-y-3">
+                    {p.highlights.map((h, idx) => (
+                      <li key={idx} className="flex gap-3 text-muted-foreground leading-relaxed text-[0.925rem]">
+                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary/60 shrink-0" />
+                        <span>{h}</span>
+                      </li>
+                    ))}
+                  </ul>
                   <div className="mt-6 flex flex-wrap gap-2">
                     {p.stack.map((s) => (
                       <span

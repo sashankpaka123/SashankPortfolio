@@ -43,7 +43,7 @@ const HeroSection = () => {
           <div className="mt-12 grid grid-cols-3 gap-6 max-w-md">
             <Stat value="13K+" label="Games analyzed" />
             <Stat value="3+" label="Shipped projects" />
-            <Stat value="30%" label="API perf. gains" />
+            <Stat value="36K+" label="Media jobs handled" />
           </div>
         </motion.div>
 
